@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Section, SEO, Button, SectionHeading, Card } from '../components/UI';
+import ApplicationForm from '../components/ApplicationForm';
 import { ClipboardList, UserCheck, CalendarCheck, Plane, ChevronDown, ChevronUp, CheckCircle, ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
@@ -160,31 +161,11 @@ const Services: React.FC = () => {
       <Section id="application-form" bg="white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy mb-4">Application Form</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-navy mb-4">Start Your Application</h2>
             <div className="w-16 h-1 bg-gold mx-auto mb-6"></div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden">
-            <div className="bg-navy px-8 py-6 border-b border-white/10">
-              <p className="text-white/90 text-sm font-light tracking-wide text-center">
-                Please ensure all documents are ready for upload before starting.
-              </p>
-            </div>
-
-            <div className="p-8 md:p-12 lg:p-16 bg-[#fafafa]">
-              <div className="bg-white rounded-xl border-2 border-dashed border-gray-300 p-12 text-center min-h-[400px] flex flex-col items-center justify-center space-y-6">
-                <div className="w-20 h-20 bg-navy/5 rounded-full flex items-center justify-center">
-                  <ClipboardList className="h-10 w-10 text-navy/60" strokeWidth={1} />
-                </div>
-                <div>
-                  <p className="text-2xl font-bold text-navy font-serif mb-2">[Embed Google Form iframe here]</p>
-                  <p className="text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
-                    Integration Point: This area is reserved for the Google Form embed code. It will load seamlessly within this premium container.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ApplicationForm />
         </div>
       </Section>
 
