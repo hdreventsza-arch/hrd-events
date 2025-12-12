@@ -1,5 +1,6 @@
 import React from 'react';
 import { Section, Button, SEO, Card } from '../components/UI';
+import StatsSection from '../components/StatsSection';
 import { ArrowRight, Globe, School, UserCheck, Star, Quote } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -35,7 +36,7 @@ const Home: React.FC = () => {
 
       {/* HERO SECTION - Premium Dark Corporate Theme with Animations */}
       <section className="relative min-h-[90vh] flex items-center bg-[#0A2A43] overflow-hidden pt-32 pb-20 lg:pt-44 lg:pb-32">
-
+        {/* ... Hero Content ... */}
         {/* Background Layer: Deep Navy & Gold Accents */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           {/* 1. Base Gradient: Deep Luxury Navy */}
@@ -162,6 +163,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* CREDIBILITY STATS SECTION */}
+      <StatsSection />
 
       {/* MESSAGE FROM THE DIRECTORS */}
       <Section bg="lightGrey">
