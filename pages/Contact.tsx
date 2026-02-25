@@ -55,7 +55,6 @@ const Contact: React.FC = () => {
                     <ContactCard
                         icon={<User size={28} strokeWidth={1} />}
                         title="Errol Ruiters"
-                        email="errol@hdrevents.com"
                         label="Director"
                         delay={150}
                     />
@@ -64,7 +63,6 @@ const Contact: React.FC = () => {
                     <ContactCard
                         icon={<User size={28} strokeWidth={1} />}
                         title="Hazel Davids-Ruiters"
-                        email="hazel@hdrevents.com"
                         label="Director"
                         delay={300}
                     />
@@ -102,7 +100,7 @@ const Contact: React.FC = () => {
 interface ContactCardProps {
     icon: React.ReactNode;
     title: string;
-    email: string;
+    email?: string;
     label?: string;
     delay?: number;
 }
@@ -121,15 +119,17 @@ const ContactCard: React.FC<ContactCardProps> = ({ icon, title, email, label, de
             {label && <p className="text-xs text-gold font-bold uppercase tracking-[0.15em]">{label}</p>}
         </div>
 
-        <div className="mt-auto w-full">
-            <a
-                href={`mailto:${email}`}
-                className="inline-flex items-center justify-center space-x-2 text-charcoal hover:text-navy font-medium text-sm transition-all py-2 px-4 rounded-lg bg-gray-50 hover:bg-gold hover:text-white w-full group-hover:shadow-md"
-            >
-                <span>{email}</span>
-                <ArrowRight size={14} className="opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
-            </a>
-        </div>
+        {email && (
+            <div className="mt-auto w-full">
+                <a
+                    href={`mailto:${email}`}
+                    className="inline-flex items-center justify-center space-x-2 text-charcoal hover:text-navy font-medium text-sm transition-all py-2 px-4 rounded-lg bg-gray-50 hover:bg-gold hover:text-white w-full group-hover:shadow-md"
+                >
+                    <span>{email}</span>
+                    <ArrowRight size={14} className="opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                </a>
+            </div>
+        )}
     </div>
 );
 

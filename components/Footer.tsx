@@ -59,8 +59,13 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#0A2A43]/70 font-light">
+        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-[#0A2A43]/70 font-light space-y-4 md:space-y-0">
           <p>© {new Date().getFullYear()} HDR Events. All rights reserved.</p>
+          <div className="text-center">
+            <span className="text-[#0A2A43]/70">
+              Developed by <a href="https://www.ticodetech.com" target="_blank" rel="noopener noreferrer" className="text-navy hover:text-gold transition-colors font-medium">www.ticodetech.com</a>
+            </span>
+          </div>
           <div className="mt-4 md:mt-0">
             <span className="text-[#0A2A43]/70">Supporting Schools <span className="text-gold">Worldwide</span></span>
           </div>
